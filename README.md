@@ -14,10 +14,10 @@ Urban mobility datasets contain millions of GPS-logged journeys alongside sensor
 * **Temporal Demand & Nightlife Shifts:** Taxi demand builds steadily across the workweek to peak on **Friday** (highest single-hour volume at **Friday 19:00** with 14,075 trips). Weekday demand peaks during evening commutes (**18:00–21:00**), whereas weekend peaks shift to late-night leisure hours (**Saturday 23:00** and **Sunday 00:00**).
 * **Urban Congestion Dynamics:** Average straight-line speeds peak at **$21.15\text{ km/h}$ at 05:00** during free-flow traffic before dropping by more than half to a daytime low of **$9.73\text{ km/h}$ at 15:00**.
 * **Airport Travel Time Variability:** Analysing journeys from the Empire State Building ($1\text{ km}$ pickup radius) to JFK and Newark ($2\text{ km}$ drop-off radius) revealed shortest travel times at **03:00** ($27.89\text{ min}$ to JFK; $26.21\text{ min}$ to Newark) and severe afternoon congestion peaks at **16:00–17:00** ($65.46\text{ min}$ to JFK; $51.88\text{ min}$ to Newark).
-* **Spatial Hotspot Clustering (DBSCAN):** Using Haversine distance ($\epsilon = 50\text{ m}$, $\text{min\_samples} = 30$) after sensitivity testing across $50\text{ m}–200\text{ m}$ radii, identified **181 clusters** during Thursday evening commutes (spanning Midtown and Upper Manhattan) vs. **142 clusters** during Friday late-night hours (concentrated in Midtown and Lower Manhattan), alongside persistent hotspots at JFK and LaGuardia airports.
+* **Spatial Hotspot Clustering (DBSCAN):** Using Haversine distance ($\epsilon = 50\text{ m}$, $\text{min samples} = 30$) after sensitivity testing across $50\text{ m}–200\text{ m}$ radii, identified **181 clusters** during Thursday evening commutes (spanning Midtown and Upper Manhattan) vs. **142 clusters** during Friday late-night hours (concentrated in Midtown and Lower Manhattan), alongside persistent hotspots at JFK and LaGuardia airports.
 
 ## Dimensionality Reduction & HDBSCAN Benchmarking
-Evaluated **PCA**, **t-SNE**, and **UMAP** on 20,000 standardised trips across 10 spatial, temporal, and journey features, followed by **HDBSCAN** clustering ($\text{min\_cluster\_size} = 100$, $\text{min\_samples} = 10$):
+Evaluated **PCA**, **t-SNE**, and **UMAP** on 20,000 standardised trips across 10 spatial, temporal, and journey features, followed by **HDBSCAN** clustering ($\text{min cluster size} = 100$, $\text{min samples} = 10$):
 
 | Method | Configuration | HDBSCAN Clusters | Noise (%) | Runtime (s) | Key Takeaway |
 | :--- | :--- | :---: | :---: | :---: | :--- |
