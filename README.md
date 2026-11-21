@@ -23,4 +23,4 @@ Real-world telematics and user-logged vehicle datasets contain high volumes of m
 
 ## Repository Structure
 * `analysis.ipynb` — Full Jupyter Notebook containing data inspection, cleaning, feature engineering, outlier filtering, and visualisations.
-* `DVE.pdf` — Full technical report covering the complete statistical analysis, South African fuel price-adjustment behaviour
+* `DVE.pdf` — Full technical report (co-authored with Ntokozo Skosana) covering the complete statistical analysis, South African fuel price-adjustment behaviour
